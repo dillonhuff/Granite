@@ -1,9 +1,11 @@
 #ifndef __GRANITE_VAR_H__
 #define __GRANITE_VAR_H__
 
+#include "src/Term.h"
+
 namespace Granite {
 
-  class Var {
+  class Var : public Term {
   public:
     Sort s;
     int id;

@@ -1,10 +1,11 @@
 CC := clang++
 CXX_FLAGS := -std=c++11 -I.
 
-ALL_FILES := test/AllTests.cpp
+SRCS := test/AllTests.cpp test/TestUtils.cpp test/SolverTests.cpp test/ContextTests.cpp src/Context.cpp
+HEADERS := src/Allocator.h src/Var.h src/Context.h test/TestUtils.h test/SolverTests.h test/ContextTests.h
 
-granite-tests: $(ALL_FILES)
-	$(CC) $(CXX_FLAGS) $(ALL_FILES) -o $@
+granite-tests: $(SRCS) $(HEADERS)
+	$(CC) $(CXX_FLAGS) $(SRCS) -o $@
 
 clean:
 	rm -f granite-tests

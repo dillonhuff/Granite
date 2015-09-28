@@ -11,7 +11,7 @@ namespace Granite {
     if (assertion) {
       std::cout << std::setw(10) << std::left << " passed" << std::endl;
     } else {
-      std::cout << std::setw(10) << testName << " FAILED" << std::endl;
+      std::cout << std::setw(10) << " FAILED" << std::endl;
     }
   }
 

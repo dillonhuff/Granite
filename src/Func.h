@@ -12,6 +12,7 @@ namespace Granite {
   public:
     Sort s;
     FuncID funcID;
+    std::vector<Term*> args;
     
     bool operator==(const Func& other) const {
       return funcID == other.funcID;
@@ -19,6 +20,12 @@ namespace Granite {
 
     bool operator!=(const Func& other) const {
       return !(*this == other);
+    }
+
+    void setArgs(std::vector<Term*> newArgs) {
+      for (auto t : newArgs) {
+	args.push_back(t);
+      }
     }
     
   };

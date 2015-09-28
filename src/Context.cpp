@@ -13,6 +13,7 @@ namespace Granite {
   Func* Context::freshFunc(FuncID i, std::vector<Term*> args) {
     Func* f = (Func*) allocator.allocate(sizeof(Func));
     f->funcID = i;
+    f->setArgs(args);
     return f;
   }
 
